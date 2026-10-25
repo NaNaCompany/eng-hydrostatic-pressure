@@ -1,0 +1,52 @@
+{
+  "id": "E006",
+  "title": "액주 게이지압 계산기",
+  "inputs_text": "액체 밀도 ρ [kg/m³], 액면 아래 깊이 h [m], 중력가속도 g [m/s²]",
+  "formula": "p_g = ρ g h",
+  "output_text": "액면 압력에 대한 증가분 p_g [Pa]",
+  "assumptions": "ρ,g>0, h≥0. 정지·등밀도 액체를 가정한다. 절대압이 아니라 액면 압력 대비 차압 하나를 출력한다.",
+  "purpose": "수두 압력 계산 / 탱크 액주압·수조 실험",
+  "sources": [
+    {
+      "label": "OpenStax · Fluids, Density, and Pressure",
+      "url": "https://openstax.org/books/university-physics-volume-1/pages/14-1-fluids-density-and-pressure"
+    }
+  ],
+  "slug": "eng-hydrostatic-pressure",
+  "category": "유체",
+  "result_label": "액면 기준 게이지압 p_g",
+  "result_dimension": "pressure",
+  "fields": [
+    {
+      "key": "rho",
+      "label": "액체 밀도 ρ",
+      "dimension": "density",
+      "example": 1000,
+      "constraint": "positive",
+      "display_unit": "kgm3",
+      "display_value": "1000"
+    },
+    {
+      "key": "h",
+      "label": "액면 아래 깊이 h",
+      "dimension": "length",
+      "example": 2,
+      "constraint": "nonnegative",
+      "display_unit": "m",
+      "display_value": "2"
+    },
+    {
+      "key": "g",
+      "label": "중력가속도 g",
+      "dimension": "acceleration",
+      "example": 9.80665,
+      "constraint": "positive",
+      "display_unit": "ms2",
+      "display_value": "9.80665"
+    }
+  ],
+  "site": "https://nanalab.kr/eng-hydrostatic-pressure/",
+  "repository": "https://github.com/NaNaCompany/eng-hydrostatic-pressure",
+  "condition": "",
+  "output_unit": "Pa"
+}
